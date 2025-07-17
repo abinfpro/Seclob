@@ -31,7 +31,7 @@ try {
   };
 
   const handleSignUp = () => {
-    navigate('/signup')
+    navigate('/')
   };
 
   const handleForgotPassword = () => {
