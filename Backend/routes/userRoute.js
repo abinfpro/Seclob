@@ -3,7 +3,7 @@ const userRouter = express.Router()
 const {signUp,login,addCategory, getcategory, addsubcategory, getsubcategory, allproduct, getallsubcategory, addproduct} = require("../controller/userController")
 
 
-userRouter.post("/signup",signUp)
+userRouter.post("/",signUp)
 userRouter.post("/login",login)
 userRouter.post("/addcategory",addCategory)
 userRouter.get("/getcategory",getcategory)
