@@ -81,7 +81,7 @@ export default function ProductDetails() {
             <div className="bg-white rounded-lg border border-gray-200 p-8">
               <div className="aspect-square flex items-center justify-center">
                 <img
-                  src={`http://localhost:8080/public/uploads/${product.image}`}
+                  src={`https://seclob-fsqq.onrender.com/public/uploads/${product.image}`}
                   alt={product.name}
                   className="w-full h-full object-contain"
                 />
@@ -96,7 +96,7 @@ export default function ProductDetails() {
                   className="bg-white rounded-lg border border-gray-200 p-4 w-20 h-20 flex items-center justify-center"
                 >
                   <img
-                    src={`http://localhost:8080/public/uploads/${product.image}`}
+                    src={`https://seclob-fsqq.onrender.com/public/uploads/${product.image}`}
                     alt={`Thumbnail ${idx + 1}`}
                     className="w-full h-full object-contain"
                   />

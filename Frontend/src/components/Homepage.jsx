@@ -58,7 +58,7 @@ export default function EcommerceProductListing() {
 
   const addCategory = async () => {
     try {
-      const res = await axios.post("http://localhost:8080/api/auth/addcategory", { name: Catagory });
+      const res = await axios.post("https://seclob-fsqq.onrender.com/api/auth/addcategory", { name: Catagory });
       setshowcatagory(res.data);
     } catch {
       alert("Add category failed");
@@ -67,7 +67,7 @@ export default function EcommerceProductListing() {
 
   const getCategory = async () => {
     try {
-      const { data } = await axios.get("http://localhost:8080/api/auth/getcategory");
+      const { data } = await axios.get("https://seclob-fsqq.onrender.com/api/auth/getcategory");
       setshowcatagory(data);
     } catch {
       alert("Fetch category failed");
@@ -76,7 +76,7 @@ export default function EcommerceProductListing() {
 
   const addSubCategory = async () => {
     try {
-      const res = await axios.post("http://localhost:8080/api/auth/addsubcategory", { selectCat, subCatValue });
+      const res = await axios.post("https://seclob-fsqq.onrender.com/api/auth/addsubcategory", { selectCat, subCatValue });
       console.log("res.data", res.data);
     } catch {
       alert("Add Sub category failed");
@@ -85,7 +85,7 @@ export default function EcommerceProductListing() {
 
   const getSubCategory = async (catname) => {
     try {
-      const { data } = await axios.get(`http://localhost:8080/api/auth/getsubcategory/${catname}`);
+      const { data } = await axios.get(`https://seclob-fsqq.onrender.com/api/auth/getsubcategory/${catname}`);
       setshowsubcatagory(data);
     } catch {
       alert("Get Sub category failed");
@@ -94,7 +94,7 @@ export default function EcommerceProductListing() {
 
   const getAllSubCategory = async () => {
     try {
-      const { data } = await axios.get("http://localhost:8080/api/auth/getallsubcategory");
+      const { data } = await axios.get("https://seclob-fsqq.onrender.com/api/auth/getallsubcategory");
       setshowallsubcatagory(data);
     } catch {
       alert("Fetch all subcategories failed");
@@ -103,7 +103,7 @@ export default function EcommerceProductListing() {
 
   const fetchAllproducts = async () => {
     try {
-      const { data } = await axios.get(`http://localhost:8080/api/auth/allproduct`);
+      const { data } = await axios.get(`https://seclob-fsqq.onrender.com/api/auth/allproduct`);
       setAllProducts(data);
       
     } catch {}
@@ -118,7 +118,7 @@ export default function EcommerceProductListing() {
 
   const handleSubmit = async () => {
     try {
-      await axios.post("http://localhost:8080/api/auth/addproduct", {
+      await axios.post("https://seclob-fsqq.onrender.com/api/auth/addproduct", {
         data,
         selectSub,
         variant,
@@ -269,7 +269,7 @@ export default function EcommerceProductListing() {
                       <div className="bg-gray-100 rounded-lg h-48 flex items-center justify-center mb-4">
                         <img
                           className="w-full h-full object-cover rounded"
-                          src={`http://localhost:8080/public/uploads/${product.image}`}
+                          src={`https://seclob-fsqq.onrender.com/public/uploads/${product.image}`}
                           alt=""
                         />
                       </div>

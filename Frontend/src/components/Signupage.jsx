@@ -25,7 +25,7 @@ export default function LoginSignupInterface() {
   const handleSignUp = async (e) => {
     e.preventDefault()
 try {
-   const res = await axios.post("http://localhost:8080/api/auth/signup",formData)
+   const res = await axios.post("https://seclob-fsqq.onrender.com/api/auth/signup",formData)
    res.data.message && navigate("/signin")
 } catch (error) {
     alert("sign up failed")
